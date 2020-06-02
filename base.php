@@ -39,11 +39,13 @@
         echo "<br><br><br><br>";
         
         ?>
+
+
     <!-- Formulaire avec méthode GET -->
 
     <form action="action.php" method="get" class="form-group">
 
-        <p>Votre prenom : <input type="text" name="prenom" required class="form-group" /></p>
+        <p>Votre prenom : <input type="text" name="prenom" required /></p>
         <p>Votre nom : <input type="text" name="nom" required /></p>
         <p>Votre âge : <input type="text" name="age" required /></p>
 
