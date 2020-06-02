@@ -40,10 +40,9 @@
         
         ?>
 
+    <!-- Formulaire avec méthode POST -->
 
-    <!-- Formulaire avec méthode GET -->
-
-    <form action="action.php" method="get" class="form-group">
+    <form action="action.php" method="post">
 
         <p>Votre prenom : <input type="text" name="prenom" required /></p>
         <p>Votre nom : <input type="text" name="nom" required /></p>
@@ -53,6 +52,7 @@
 
         <p><input type="submit" value="OK"></p>
     </form>
+
 
 
     <!-- Bootstrap ==> C'est un framework (html, css et javascript) facilitant la mise en page (responsive) d'une page web -->

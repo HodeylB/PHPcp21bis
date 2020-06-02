@@ -19,14 +19,19 @@
 <body>
 
 
-<p> Bonjour, <?php echo ($_GET['prenom']); ?> </p>
+<p> Bonjour, <?php echo ($_POST['prenom']); ?> </p>
 
-<p>Tu as <?php echo (int)$_GET['age']; ?> ans.</p>
-<p><?php echo "Dans ".(int)$_GET['ecart']." ans, tu seras âgé de ".((int)$_GET['age'] + (int)$_GET['ecart']). " ans.  <br> "; ?></p>
+<p>Tu as <?php echo (int)$_POST['age']; ?> ans.</p>
+<p><?php echo "Dans ".(int)$_POST['ecart']." ans, tu seras âgé de ".((int)$_POST['age'] + (int)$_POST['ecart']). " ans.  <br> "; ?></p>
 
-    <!-- MODE DEBUG : Afficher le tableau (Array) GET -->
+    <!-- MODE DEBUG : Afficher le contenu tableau (Array) GET -->
 
-<?php print_r($_GET) ?>
+<?php print_r($_POST) ?>
+<br>
+
+<!-- MODE DEBUG : Afficher le tableau et les infos sur les strings (Array) GET -->
+<br>
+<?php var_dump($_POST) ?>
     
 
 
