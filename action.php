@@ -19,20 +19,24 @@
 <body>
 
 
-<p> Bonjour, <?php echo ($_POST['prenom']); ?> </p>
+    <p> Bonjour, <?= ($_POST['prenom']); ?> </p>
 
-<p>Tu as <?php echo (int)$_POST['age']; ?> ans.</p>
-<p><?php echo "Dans ".(int)$_POST['ecart']." ans, tu seras âgé de ".((int)$_POST['age'] + (int)$_POST['ecart']). " ans.  <br> "; ?></p>
+    <p>Tu as <?= (int)$_POST['age']; ?> ans.</p>
+    <p><?= "Dans ".(int)$_POST['ecart']." ans, tu seras âgé de ".((int)$_POST['age'] + (int)$_POST['ecart']). " ans.  <br> "; ?>
+    </p>
+
+    <hr class="my-5">
 
     <!-- MODE DEBUG : Afficher le contenu tableau (Array) GET -->
 
-<?php print_r($_POST) ?>
-<br>
+    <?php print_r($_POST) ?>
 
-<!-- MODE DEBUG : Afficher le tableau et les infos sur les strings (Array) GET -->
-<br>
-<?php var_dump($_POST) ?>
-    
+    <hr class="my-5">
+
+    <!-- MODE DEBUG : Afficher le tableau et les infos sur les strings (Array) GET -->
+
+    <?php var_dump($_POST) ?>
+
 
 
 

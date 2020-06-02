@@ -19,38 +19,56 @@
 <body>
 
     <?php 
+        // tableau association
 
-        $prenom = "Imene";
-        $age = 15;
+        $identity = [
+
+            "prenom" => "Alpha", 
+            "age" => 7.23 // pour mettre des chiffres avec virgule il faut utiliser le point
+
+        ];
+
+        var_dump($identity); // return du contenu et infos tableau identity
+
+        // empacter les résultats du tableau associatifs dans des variables pour les afficher :
+        $prenom = $identity["prenom"];
+        $age = $identity["age"];
         $ecart = 12;
 
         ?>
 
-    <h1> <?php echo "Hello $prenom : la \"fétarde\" d'aujourd'hui <br>"; ?> </h1>
+    <hr class="my-5">
+
+    <h1> <?= "Hello $prenom : la \"fétarde\" d'aujourd'hui <br>"; ?> </h1>
 
     <?php 
+
+    // méthode pour appeler la variable prénom :
         
         echo "Comment ça va $prenom ? <br> ";
+
+        // méthode pour appeler directement la donnée directement depuis tableau associatif : 
+
+        echo "Comment ça va {$identity["prenom"]} ? <br> ";
 
         echo " Tu as quel âge ? $age ans <br> ";
 
         echo "Dans ".($ecart)." ans, tu seras âgé de ".($age + 8). " ans.  <br> ";
-
-        echo "<br><br><br><br>";
         
         ?>
 
+    <hr class="my-5">
+
     <!-- Formulaire avec méthode POST -->
 
-    <form action="action.php" method="post">
-
-        <p>Votre prenom : <input type="text" name="prenom" required /></p>
-        <p>Votre nom : <input type="text" name="nom" required /></p>
-        <p>Votre âge : <input type="text" name="age" required /></p>
-
-        <p>L'écart souhaité : <input type="text" name="ecart" required /></p>
-
-        <p><input type="submit" value="OK"></p>
+    <form action="action.php" method="post" class="input-group form-group">
+        <p class="input-group-prepend input-group-text">
+            Votre prenom : <input type="text" name="prenom" required /></p>
+        <p class="input-group-prepend input-group-text">Votre nom : <input type="text" name="nom" required /></p>
+        <p class="input-group-prepend input-group-text">Votre âge : <input type="text" name="age" required /></p>
+        <p class="input-group-prepend input-group-text">L'écart souhaité : <input type="text" name="ecart" required />
+        </p>
+        <p><input type="submit" value="OK" class="btn btn-primary"></p>
     </form>
 
 
