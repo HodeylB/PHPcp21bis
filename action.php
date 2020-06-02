@@ -19,11 +19,14 @@
 <body>
 
 
-<p> Bonjour, <?php echo htmlspecialchars($_GET['prenom']); ?> </p>
+<p> Bonjour, <?php echo ($_GET['prenom']); ?> </p>
 
 <p>Tu as <?php echo (int)$_GET['age']; ?> ans.</p>
 <p><?php echo "Dans ".(int)$_GET['ecart']." ans, tu seras âgé de ".((int)$_GET['age'] + (int)$_GET['ecart']). " ans.  <br> "; ?></p>
 
+    <!-- MODE DEBUG : Afficher le tableau (Array) GET -->
+
+<?php print_r($_GET) ?>
     
 
 
