@@ -21,8 +21,9 @@
 <!-- Vérification du chemin du fichier -->
 
     <?=__FILE__ ?>
-    <hr class="my-5">
     
+    <hr class="my-5">
+
     <?php 
         // tableau associatif
 
@@ -94,7 +95,7 @@
 if(!empty($_POST)):
     var_dump($GLOBALS);
     $anneeEcart = 8; ?>
-    <h1>Salut <?=$_POST["firstName"]; ?></h1>
+    <h1>Salut <?=ucfirst($_POST["firstName"]); ?></h1>
     <p>Tu as <?=$_POST["old"];?> ans et dans <?=$anneeEcart?> ans tu seras âgé de <?=$_POST["old"]+$anneeEcart;?> </p>
     <?php else: ?>
     <form action="" method="post" class="input-group form-group modifForm">
