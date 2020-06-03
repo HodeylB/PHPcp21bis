@@ -18,10 +18,12 @@
 
 <body>
 
-<!-- Vérification du chemin du fichier -->
+    <?php require_once("menu.php");?>
+
+    <!-- Vérification du chemin du fichier -->
 
     <?=__FILE__ ?>
-    
+
     <hr class="my-5">
 
     <?php 
@@ -109,23 +111,21 @@ if(!empty($_POST)):
 
 ?>
 
-<!-- CSS Additionnel pour centrer les formulaires -->
+    <!-- CSS Additionnel pour centrer les formulaires -->
 
-<style>
+    <style>
+        .modifForm {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            text-align: center;
+        }
 
-.modifForm {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    text-align: center;
-}
-
-p input {
-    margin: 0 auto;
-}
-
-</style>
+        p input {
+            margin: 0 auto;
+        }
+    </style>
     <!-- Bootstrap ==> C'est un framework (html, css et javascript) facilitant la mise en page (responsive) d'une page web -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
