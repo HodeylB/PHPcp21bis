@@ -103,6 +103,8 @@ if(!empty($_POST)):
 
 ?>
 
+<!-- CSS Additionnel pour centrer les formulaires -->
+
 <style>
 
 .modifForm {
