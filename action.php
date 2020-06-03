@@ -19,7 +19,7 @@
 <body>
 
 
-    <p> Bonjour, <?= ($_POST['prenom']); ?> </p>
+    <p> Bonjour, <?= ($_POST['prenom']); ?> <?= ($_POST['nom']); ?> </p>
 
     <p>Tu as <?= (int)$_POST['age']; ?> ans.</p>
     <p><?= "Dans ".(int)$_POST['ecart']." ans, tu seras âgé de ".((int)$_POST['age'] + (int)$_POST['ecart']). " ans.  <br> "; ?>

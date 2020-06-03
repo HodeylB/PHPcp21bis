@@ -19,7 +19,7 @@
 <body>
 
     <?php 
-        // tableau association
+        // tableau associatif
 
         $identity = [
 
@@ -61,7 +61,7 @@
 
     <!-- Formulaire avec méthode POST -->
 
-    <form action="action.php" method="post" class="input-group form-group">
+    <form action="action.php" method="post" class="input-group form-group modifForm">
         <p class="input-group-prepend input-group-text">
             Votre prenom : <input type="text" name="prenom" required /></p>
         <p class="input-group-prepend input-group-text">Votre nom : <input type="text" name="nom" required /></p>
@@ -71,8 +71,53 @@
         <p><input type="submit" value="OK" class="btn btn-primary"></p>
     </form>
 
+    <!-- Pour avoir les réponses sur la même page, il faut supprimer l'attribut action="action.php" et supprimer ce commentaire
 
+        <p> Bonjour, <?= ($_POST['prenom']); ?> </p>
 
+<p>Tu as <?= (int)$_POST['age']; ?> ans.</p>
+<p><?= "Dans ".(int)$_POST['ecart']." ans, tu seras âgé de ".((int)$_POST['age'] + (int)$_POST['ecart']). " ans.  <br> "; ?>
+</p>
+
+-->
+    <!-- Afficher formulaire si il n'est pas vide -->
+
+    <hr class="my-5">
+
+    <?php 
+
+if(!empty($_POST)):
+    var_dump($GLOBALS);
+    $anneeEcart = 8; ?>
+    <h1>Salut <?=$_POST["firstName"]; ?></h1>
+    <p>Tu as <?=$_POST["old"];?> ans et dans <?=$anneeEcart?> ans tu seras âgé de <?=$_POST["old"]+$anneeEcart;?> </p>
+    <?php else: ?>
+    <form action="" method="post" class="input-group form-group modifForm">
+        <p class="input-group-prepend input-group-text">Votre nom : <input type="text" name="firstName" required /></p>
+        <p class="input-group-prepend input-group-text">Votre âge : <input type="text" name="old" required /></p>
+        </p>
+        <p><input type="submit" value="OK" class="btn btn-primary"></p>
+    </form>
+
+    <?php endif;
+
+?>
+
+<style>
+
+.modifForm {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+}
+
+p input {
+    margin: 0 auto;
+}
+
+</style>
     <!-- Bootstrap ==> C'est un framework (html, css et javascript) facilitant la mise en page (responsive) d'une page web -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
