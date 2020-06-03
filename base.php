@@ -18,6 +18,11 @@
 
 <body>
 
+<!-- Vérification du chemin du fichier -->
+
+    <?=__FILE__ ?>
+    <hr class="my-5">
+    
     <?php 
         // tableau associatif
 
