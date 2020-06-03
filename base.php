@@ -26,6 +26,12 @@
 
     <hr class="my-5">
 
+    <?php include_once("functions.php");?>
+
+    <?php alert() ?>
+
+    <hr class="my-5">
+
     <?php 
         // tableau associatif
 

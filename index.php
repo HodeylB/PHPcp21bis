@@ -1,7 +1,6 @@
 <!-- Sans le require, la page ne s'ouvre pas -->
 <?php require_once("head.php");?>
 <?php include_once("menu.php");?>
-<?php include_once("functions.php");?>
 
 <?php include_once("carousel.php");?>
 <main>
@@ -14,9 +13,10 @@
             <div class="col-md-9">
                 <!-- Côté droit -->
 
-<?php alert("Attention","warning");?>
-<?php alert("Attention","success");?>
-<?php alert("Attention","danger");?>
+
+<?php alert("","success");?>
+<?php alert("","warning");?>
+<?php alert("","danger");?>
             </div>
         </div>
     </section>

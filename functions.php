@@ -8,8 +8,10 @@ if ($typeAlert == "success") {
         $msg = "Bravo !";
 } elseif ($typeAlert == "warning") {
         $typeMsg = "Attention";
+        $msg = "Faites attention";
 } elseif ($typeAlert == "danger") {
         $typeMsg = "Stop";
+        $msg = "C'est chaud là";
 }
 
 // exemple de condition ternaire : 

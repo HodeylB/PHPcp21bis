@@ -1,3 +1,5 @@
+
+<?php include_once("functions.php");?>
 <head>
         <meta charset="UTF-8">
         <meta name="author" content="XXX">
