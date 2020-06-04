@@ -116,7 +116,23 @@ if(!empty($_POST)):
     <?php endif;
 
 ?>
+<hr class="my-5">
 
+<?php
+
+$bjr = "Bonjour";
+$max = 3;
+
+for ($i = 0 ; $i < $max ; $i++) {
+$bjr .= $i +1 . ($i < ($max - 1) ? ", " : ".");
+} 
+echo $bjr;
+
+?>
+
+<hr class="my-5">
+
+<img src="capture-boucles.png" alt="" class="capture">
     <!-- CSS Additionnel pour centrer les formulaires -->
 
     <style>
@@ -130,6 +146,11 @@ if(!empty($_POST)):
 
         p input {
             margin: 0 auto;
+        }
+
+        .capture {
+            width: 50%;
+            height: 50%;
         }
     </style>
     <!-- Bootstrap ==> C'est un framework (html, css et javascript) facilitant la mise en page (responsive) d'une page web -->
