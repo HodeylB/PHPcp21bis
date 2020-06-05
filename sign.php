@@ -5,17 +5,14 @@
     <section class="container py-2 mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <?php var_dump($_POST) ?>
+                <?php  ?>
 
-<?php 
+                <?php 
 
 // en cliquant, si formulaire n'est pas vide,afficher alert success sinon erreur
 if(!empty($_POST)){
     alert("Votre inscription est validée");
-}else{
-        echo "erreur";
-    };
-
+}
 ?>
 
                 <form class="modal-content" method="POST">
