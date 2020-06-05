@@ -13,13 +13,18 @@
             </div>
             <div class="col-md-9">
                 <!-- Côté droit -->
+                <?php alert() ?>
+                <?php alert("","warning") ?>
+                <?php alert("","danger") ?>
                 <div class="text-right">
+
                     <span class="mr-3">
+                        
                         <?php 
                         $products = 12; 
 
                     // si quantite n'est pas défini alors afficher nombre de produits de la variable global $products
-                    
+
                         $max = isset($_GET["quantite"]) ? $_GET["quantite"] : $products;
                         for ($i = 0 ; $i < 4 ; $i++) :
                             // global $products;
@@ -46,8 +51,6 @@
 
                     <?php
 
-
-                    
                     for ($i = 0 ; $i < $max ; $i++) {
                     include "product.php";
                     }

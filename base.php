@@ -153,6 +153,68 @@ echo $bjr;
             height: 50%;
         }
     </style>
+
+<hr class="my-5">
+
+<?php
+$articles = array(
+"Article de fou",
+"Du PHP..encore..",
+"article de malade"
+);
+$descriptions = array(
+    "Truc de ouf wesh",
+    "a quand je JS ?",
+    "Truc de malade wesh"
+    );
+var_dump($articles);
+for ($i=0; $i < 3; $i++):?>
+<div class="card mb-3">
+    <div class="card-body py-0 pt-3">
+        <h1><?=$articles[$i]?></h1>
+        <p><?= $descriptions[$i]?></p>
+    </div>
+</div>
+
+<?php endfor;
+?>
+
+<hr class="my-5">
+
+        <?php
+
+        $articles = array(
+        [
+        "titre" => "Article de fou", 
+        "descriptif" => "truc de fou wesh",
+        "prix" => "8,99€"
+        ],[
+        "titre" => "du PHP..encore..",
+        "descriptif" => "A quand le JS ?",
+        "prix" => "8,99€"
+        ],[
+        "titre" => "article de malade",
+        "descriptif" => "truc de malade wesh",
+        "prix" => "8,99€"
+        ]
+        );
+        var_dump($articles);
+
+        foreach ($articles as $article):?>
+
+                <div class="card mb-3">
+            <div class="card-body py-0 pt-3">
+                <h1><?=$article["titre"] ?></h1>
+                <p><?=$article["descriptif"] ?></p>
+                <p><?=$article["prix"] ?></p>
+            </div>
+        </div>
+        <?php endforeach;
+        ?> 
+
+
+
+
     <!-- Bootstrap ==> C'est un framework (html, css et javascript) facilitant la mise en page (responsive) d'une page web -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

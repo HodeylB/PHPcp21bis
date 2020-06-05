@@ -28,4 +28,19 @@ if ($typeAlert == "success") {
 </div>
 <?php }
 
-// pas de besoin de fermer la balise php, ce fichier est fait pour ne contenir que du php
+/**
+ * par convention on ne ferme pas la balise php, ce fichier est fait pour ne contenir que du php
+*/
+
+/**
+ * Connexion à la base de données :
+ */
+
+$dns = 'mysql:dbname=cp21bis;host=localhost';
+$user = 'root';
+$password = 'root';
+try {
+    $db = new PDO($dns, $user, $password);
+} catch (PDOException $e) {
+    echo 'Connexion échouée : ' . $e->getMessage();
+}

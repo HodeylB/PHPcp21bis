@@ -1,6 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.php">
             <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30"
                 class="d-inline-block align-top" alt="" loading="lazy">
             Bootstrap
@@ -25,7 +25,7 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <a class="btn btn-outline-primary mr-2" href="#exampleModal">Sign in</a>
+            <a class="btn btn-outline-primary mr-2" href="sign.php">Sign in</a>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Log in
             </button>
