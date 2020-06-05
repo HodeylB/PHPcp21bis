@@ -10,7 +10,7 @@ if ($typeAlert == "success") {
         $typeMsg = "Attention";
         
 } elseif ($typeAlert == "danger") {
-        $typeMsg = "Stop";
+        $typeMsg = "Erreur";
         
 }
 
@@ -72,7 +72,7 @@ function insert($table, $colonnes="*"){
         // le #^ ^# marque le début et la fin du pattern
         $regex = preg_match("#^[a-z0-9_\-\.]{1,20}@[a-z0-9_\-\.]{1,20}\.[a-z\.]{2,9}^#");
     }else {
-        alert("Vous n'avez pas correctement rempli le formulaire", "danger");
+        alert("L'adresse mail et sa confirmation ne correspondent pas !", "danger");
     }
 }
 
@@ -89,7 +89,6 @@ insert ("users");
 //$users = coDB()->query($sql)->fetchAll();
 
 
-// $add = "INSERT INTO `users` (`id`, `pseudo`, `email`, `password`, `created`, `updated`, `deleted`) 
-        // VALUES (NULL, 'TESTEUR', '', '', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL);";
+$add = "INSERT INTO `users` (`id`, `pseudo`, `email`, `password`, `created`, `updated`, `deleted`) VALUES (NULL, '".$_POST["pseudo"]."', '".$_POST["mail"]."', '".$_POST["password"]."', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL)";
 
-// $db->exec($add);
+coDB()->exec($add);
